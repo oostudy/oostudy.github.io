@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>胡永红 - 十年游戏开发专家简历</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#0FC6C2',
+                        dark: '#1D2939',
+                        light: '#F9FAFB'
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .transition-custom {
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            .hover-scale {
+                transition: transform 0.3s ease;
+            }
+            .hover-scale:hover {
+                transform: scale(1.02);
+            }
+        }
+    </style>
+</head>
+<body class="font-inter bg-light text-dark antialiased">
+    <!-- 导航栏 -->
+    <header class="fixed w-full bg-white/80 backdrop-blur-md shadow-sm z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+                    <span class="text-white font-bold text-lg">胡</span>
+                </div>
+                <span class="font-bold text-xl text-primary">胡永红</span>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="font-medium hover:text-primary transition-custom">关于</a>
+                <a href="#experience" class="font-medium hover:text-primary transition-custom">工作经验</a>
+                <a href="#skills" class="font-medium hover:text-primary transition-custom">技能</a>
+                <a href="#projects" class="font-medium hover:text-primary transition-custom">项目</a>
+            </nav>
+            <button class="md:hidden text-dark text-xl" id="menu-toggle">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+        <!-- 移动端菜单 -->
+        <div class="md:hidden hidden bg-white shadow-lg absolute w-full" id="mobile-menu">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+                <a href="#about" class="font-medium py-2 hover:text-primary transition-custom">关于</a>
+                <a href="#experience" class="font-medium py-2 hover:text-primary transition-custom">工作经验</a>
+                <a href="#skills" class="font-medium py-2 hover:text-primary transition-custom">技能</a>
+                <a href="#projects" class="font-medium py-2 hover:text-primary transition-custom">项目</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 英雄区域 -->
+        <section class="pt-32 pb-20 bg-gradient-to-br from-primary/5 to-secondary/5">
+            <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-bold leading-tight text-dark mb-4">
+                        胡永红
+                        <span class="text-primary">个人简历</span>
+                    </h1>
+                    <p class="text-[clamp(1rem,2vw,1.25rem)] text-gray-600 mb-8 max-w-xl">
+                        拥有十年游戏开发经验，专注于休闲、SLG和MOBA游戏开发，精通Unity、Cocos、LayaBox等主流引擎。
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#projects" class="px-8 py-3 bg-white text-primary border border-primary rounded-lg hover:bg-primary/5 transition-all">
+                            查看项目
+                        </a>
+                    </div>
+              </div>
+                <div class="md:w-1/2 flex justify-center md:justify-end">
+                    <div class="relative">
+                        <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-primary to-secondary overflow-hidden shadow-2xl">
+                          <img src="https://picsum.photos/seed/huyonghong/400/400" alt="胡永红照片" class="w-full h-full object-cover mix-blend-overlay">
+                        </div>
+                        <div class="absolute -bottom-5 -left-5 bg-white p-4 rounded-lg shadow-lg">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
+                                    <i class="fa fa-code text-green-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">十年经验-十年迷茫</p>
+                                    <p class="font-bold">2015年-2025年&nbsp;</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute -top-5 -right-5 bg-white p-4 rounded-lg shadow-lg">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
+                                    <i class="fa fa-gamepad text-blue-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">项目经验</p>
+                                    <p class="font-bold">20+ 项目</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 关于部分 -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold mb-4">关于我</h2>
+                    <div class="w-20 h-1 bg-primary mx-auto"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <div class="bg-gray-50 p-8 rounded-xl hover-scale">
+                        <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                            <i class="fa fa-user text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">个人信息</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <i class="fa fa-briefcase text-primary mr-3"></i>
+                                <span>游戏开发者</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fa fa-envelope text-primary mr-3"></i>
+                                <span>291309945@qq.com</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fa fa-phone text-primary mr-3"></i>
+                                <span>182-1555-2185</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fa fa-map-marker text-primary mr-3"></i>
+                                <span>成都市&nbsp;</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fa fa-graduation-cap text-primary mr-3"></i>
+                                <span>计算机科学学士</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-xl hover-scale">
+                        <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                            <i class="fa fa-rocket text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">职业目标</h3>
+                        <p class="text-gray-600 mb-4">
+                            作为一名拥有十年经验的游戏开发者，我致力于创造富有创意和吸引力的游戏体验。我擅长团队协作、技术创新和项目管理，希望在游戏开发领域继续挑战自我，创造出具有影响力的游戏作品。
+                        </p>
+                        <p class="text-gray-600">
+                            我对新技术充满热情，不断学习和探索游戏开发的最新趋势和技术，以提供最佳的游戏解决方案。
+                        </p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-xl hover-scale">
+                        <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                            <i class="fa fa-star text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">主要成就</h3>
+                        <ul class="space-y-3">
+                            <li class="flex">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span>参与开发多款千万级用户量游戏，累计下载量超过1亿</span>
+                            </li>
+                            <li class="flex">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span>参与移植jnity引擎到unity引擎中&nbsp;</span>
+                            </li>
+                            <li class="flex">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span>layabox开发的moba游戏王者别嚣张成为首页推荐的游戏</span>
+                            </li>
+                            <li class="flex">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span>&nbsp;Cocos持续学习追踪</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 工作经验部分 -->
+        <section id="experience" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold mb-4">工作经验</h2>
+                    <div class="w-20 h-1 bg-primary mx-auto"></div>
+                </div>
+                <div class="relative">
+                    <!-- 时间线 -->
+                    <div class="absolute left-0 md:left-1/2 top-0 bottom-0 w-1 bg-primary/20 transform md:translate-x-[-50%]"></div>
+                    
+                    <!-- 经验项1 -->
+                    <div class="mb-12 relative">
+                        <div class="md:flex md:justify-between">
+                            <div class="md:w-5/12 mb-6 md:mb-0">
+                                <div class="bg-white p-6 rounded-xl shadow-md hover-scale">
+                                    <div class="flex items-center mb-4">
+                                        <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                                            <i class="fa fa-building text-primary text-xl"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-bold text-lg">游戏开发-高手如云</h3>
+                                            <p class="text-gray-500">jjer&nbsp;</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-600 mb-4">
+                                      负责多款休闲游戏的开发与优化，维护《JJ斗地主》和《JJ麻将》等热门游戏。参与移植项目转向untiy引擎。
+                                  </p>
+                                    <ul class="text-gray-600 space-y-2">
+                                        <li class="flex items-start">
+                                            <i class="fa fa-angle-right text-primary mt-1 mr-2"></i>
+                                            <span>持续维护jj斗地主地方游戏更新和迭代，主要负责掼蛋，二麻，保皇，龙凤牌，四斗，二斗，双扣，升级，跑得快，干瞪眼，围棋和军旗相关pc，移动端和web端维护和开发。&nbsp;&nbsp;</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fa fa-angle-right text-primary mt-1 mr-2"></i>
+                                            <span>参与移植jnity项目jj麻将到unity引擎，深入学习了解unity引擎。</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fa fa-angle-right text-primary mt-1 mr-2"></i>
+                                            <span>持续优化游戏性能，降低内存占用，提升游戏的表现。</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="hidden md:block md:w-2/12 flex justify-center">
+                                <div class="w-8 h-8 bg-primary rounded-full border-4 border-white shadow-md z-10 transform translate-y-[20%]"></div>
+                            </div>
+                            <div class="md:w-5/12 flex justify-center md:justify-end">
+                                <div class="bg-primary text-white px-6 py-3 rounded-lg shadow-lg transform translate-y-[20%]">
+                                  2022 - 至今
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 经验项2 -->
+                    <div class="mb-12 relative">
+                        <div class="md:flex md:justify-between">
+                            <div class="md:w-5/12 md:order-2 mb-6 md:mb-0">
+                                <div class="bg-white p-6 rounded-xl shadow-md hover-scale">
+                                    <div class="flex items-center mb-4">
+                                        <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                                            <i class="fa fa-building text-primary text-xl"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-bold text-lg">游戏开发-风云变幻</h3>
+                                            <p class="text-gray-500">小游戏&nbsp;</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-600 mb-4">
+                                      负责MOBA和FPS游戏的技术开发 ，开发了《王者别嚣张》和《王者精英》等游戏。
+                                  </p>
+                                    <ul class="text-gray-600 space-y-2">
+                                        <li class="flex items-start">
+                                            <i class="fa fa-angle-right text-primary mt-1 mr-2"></i>
+                                            <span>实现MOBA游戏《王者别嚣张》的整体研发</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fa fa-angle-right text-primary mt-1 mr-2"></i>
+                                            <span>实现FPS《王者精英》魔王模式的玩法</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fa fa-angle-right text-primary mt-1 mr-2"></i>
+                                            <span>小游戏sdk平台的接入，4399，字节，微信，快手，非洲传音等小游戏平台。&nbsp;</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="hidden md:block md:w-2/12 flex justify-center">
+                                <div class="w-8 h-8 bg-primary rounded-full border-4 border-white shadow-md z-10 transform translate-y-[20%]"></div>
+                            </div>
+                            <div class="md:w-5/12 md:order-1 flex justify-center md:justify-start">
+                                <div class="bg-primary text-white px-6 py-3 rounded-lg shadow-lg transform translate-y-[20%]">
+                                    2018 - 2021
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 经验项3 -->
+                    <div class="relative">
+                        <div class="md:flex md:justify-between">
+                            <div class="md:w-5/12 mb-6 md:mb-0">
+                                <div class="bg-white p-6 rounded-xl shadow-md hover-scale">
+                                    <div class="flex items-center mb-4">
+                                        <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                                            <i class="fa fa-building text-primary text-xl"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-bold text-lg">游戏开发-初出茅庐</h3>
+                                            <p class="text-gray-500">杂七杂八&nbsp;</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-600 mb-4">
+                                      负责公司核心游戏项目的技术架构设计与优化，参与开发了《三国志名将传》和《魔法全明星》等游戏。
+                                  </p>
+                                    <ul class="text-gray-600 space-y-2">
+                                        <li class="flex items-start">
+                                            <i class="fa fa-angle-right text-primary mt-1 mr-2"></i>
+                                            <span>实现大型SLG游戏的主城和世界战争</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fa fa-angle-right text-primary mt-1 mr-2"></i>
+                                            <span>参与魔法全明星的活动和新项目的搭建&nbsp;</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fa fa-angle-right text-primary mt-1 mr-2"></i>
+                                            <span>建立游戏性能优化标准，各个模块的管理，确保游戏在各种设备上都有良好表现</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="hidden md:block md:w-2/12 flex justify-center">
+                                <div class="w-8 h-8 bg-primary rounded-full border-4 border-white shadow-md z-10 transform translate-y-[20%]"></div>
+                            </div>
+                            <div class="md:w-5/12 flex justify-center md:justify-end">
+                                <div class="bg-primary text-white px-6 py-3 rounded-lg shadow-lg transform translate-y-[20%]">
+                                  2015 - 2018
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 技能部分 -->
+        <section id="skills" class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold mb-4">专业技能</h2>
+                    <div class="w-20 h-1 bg-primary mx-auto"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div>
+                        <h3 class="text-xl font-bold mb-6">游戏开发引擎</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Unity</span>
+                                    <span>65%</span>
+                                </div>
+                                <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="h-full bg-primary rounded-full" style="width: 65%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Cocos2d-x/Cocos Creator</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="h-full bg-primary rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">LayaBox</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="h-full bg-primary rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">自研引擎Jnity</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="h-full bg-primary rounded-full" style="width: 95%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-6">编程语言</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">C#</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="h-full bg-primary rounded-full" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">JavaScript/TypeScript</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="h-full bg-primary rounded-full" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">C++</span>
+                                    <span>65%</span>
+                                </div>
+                                <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="h-full bg-primary rounded-full" style="width: 65%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Lua</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="h-full bg-primary rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-16">
+                    <h3 class="text-xl font-bold mb-8 text-center">其他技能</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                        <div class="bg-gray-50 p-6 rounded-xl text-center hover-scale">
+                            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fa fa-database text-primary text-2xl"></i>
+                            </div>
+                            <h4 class="font-bold mb-2">服务器开发</h4>
+                            <p class="text-gray-600 text-sm">熟悉分布式系统架构</p>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-xl text-center hover-scale">
+                            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fa fa-mobile text-primary text-2xl"></i>
+                            </div>
+                            <h4 class="font-bold mb-2">移动开发</h4>
+                            <p class="text-gray-600 text-sm">掌握基本的iOS/Android原生和跨平台开发</p>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-xl text-center hover-scale">
+                            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fa fa-line-chart text-primary text-2xl"></i>
+                            </div>
+                            <h4 class="font-bold mb-2">游戏优化</h4>
+                            <p class="text-gray-600 text-sm">性能调优、内存管理和网络优化</p>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-xl text-center hover-scale">
+                            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fa fa-users text-primary text-2xl"></i>
+                            </div>
+                            <h4 class="font-bold mb-2">团队管理</h4>
+                            <p class="text-gray-600 text-sm">希望尝试获得带团队管理经验</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 项目部分 -->
+        <section id="projects" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold mb-4">代表作品</h2>
+                    <div class="w-20 h-1 bg-primary mx-auto"></div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- 项目1 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md hover-scale">
+                        <div class="relative">
+                            <img src="https://static.jjbisai.com/website/imgs/jj_pcsite/boardgame/ddz-1.jpg" alt="JJ斗地主游戏截图" class="w-full h-56 object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                                <div class="p-6">
+                                    <span class="px-3 py-1 bg-primary text-white text-xs rounded-full">休闲游戏</span>
+                                    <h3 class="text-white font-bold text-xl mt-2">JJ斗地主</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-600 mb-4">
+                              一款基于Jnity和 Unity双引擎开发的经典斗地主游戏，支持多种斗地主和地方特色玩法，拥有精美UI和流畅的游戏体验。
+                          </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">Unity</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">C#</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">UGUI</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">休闲游戏</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500">
+                                    <i class="fa fa-users mr-1"></i> 1000万+用户
+                                </span>
+                                <span class="text-sm text-gray-500">
+                                    <i class="fa fa-calendar mr-1"></i> 2016-2018
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 项目2 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md hover-scale">
+                        <div class="relative">
+                            <img src="https://pic.87g.com/upload/2024/0424/20240424101652851.jpg" alt="王者别嚣张游戏截图" class="w-full h-56 object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                                <div class="p-6">
+                                    <span class="px-3 py-1 bg-primary text-white text-xs rounded-full">MOBA游戏</span>
+                                    <h3 class="text-white font-bold text-xl mt-2">王者别嚣张</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-600 mb-4">
+                              一款快节奏MOBA手游，支持5V5和 3V3对战模式，具有丰富的英雄系统和技能组合，采用untiy+layabox 。
+                          </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">LayaBox&nbsp;</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">TypeScript</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">MOBA</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">多人在线</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500">
+                                    <i class="fa fa-users mr-1"></i> 500万+用户
+                                </span>
+                                <span class="text-sm text-gray-500">
+                                    <i class="fa fa-calendar mr-1"></i> 2018-2019
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 项目3 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md hover-scale">
+                        <div class="relative">
+                            <img src="https://tiebapic.baidu.com/forum/w%3D580%3B/sign=f388f62024d0f703e6b295d438c1503d/242dd42a2834349b7aa0ceb28fea15ce36d3be67.jpg?tbpicau=2025-07-03-05_8332a90c2a450d90c2adeb2e4680379d" alt="三国志名将传游戏截图" class="w-full h-56 object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                                <div class="p-6">
+                                    <span class="px-3 py-1 bg-primary text-white text-xs rounded-full">SLG游戏</span>
+                                    <h3 class="text-white font-bold text-xl mt-2">三国志名将传</h3>
+                                </div>
+								
+                            </div>
+                        </div>
+						
+                        <div class="p-6">
+                            <p class="text-gray-600 mb-4">
+                              一款大型三国题材SLG手游，融合了策略、养成和战斗元素，支持万人同服竞技，采用cocos引擎。
+                          </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">cocos引擎</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">lua&nbsp;</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">SLG</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">大型多人</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500">
+                                    <i class="fa fa-users mr-1"></i> 2000万+用户
+                                </span>
+                                <span class="text-sm text-gray-500">
+                                    <i class="fa fa-calendar mr-1"></i> 2021-至今
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 项目4 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md hover-scale">
+                        <div class="relative">
+                            <img src="https://static.jjbisai.com/website/imgs/jj_pcsite/202503update/mj-4.jpg" alt="JJ麻将游戏截图" class="w-full h-56 object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                                <div class="p-6">
+                                    <span class="px-3 py-1 bg-primary text-white text-xs rounded-full">休闲游戏</span>
+                                    <h3 class="text-white font-bold text-xl mt-2">JJ麻将</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-600 mb-4">
+                              一款基于Jnity和Unity开发的休闲麻将游戏，支持多种地方麻将玩法，拥有社交系统和比赛系统。
+                          </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">Unity</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">C#</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">休闲</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">社交</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500">
+                                    <i class="fa fa-users mr-1"></i> 800万+用户
+                                </span>
+                                <span class="text-sm text-gray-500">
+                                    <i class="fa fa-calendar mr-1"></i> 2017-2019
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 项目5 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md hover-scale">
+                        <div class="relative">
+                            <img src="https://imga2.5054399.com/upload_pic/2021/6/22/4399_11513694612.jpg" alt="吃鸡王者精英游戏截图" class="w-full h-56 object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                                <div class="p-6">
+                                    <span class="px-3 py-1 bg-primary text-white text-xs rounded-full">FPS游戏</span>
+                                    <h3 class="text-white font-bold text-xl mt-2">吃鸡王者精英</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-600 mb-4">
+                              一款5V5公平竞技FPS手游，拥有多种游戏模式的射击游戏 。
+                          </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">LayaBox&nbsp;</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">TypeScript&nbsp;</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">FPS</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">竞技</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500">
+                                    <i class="fa fa-users mr-1"></i> 1500万+用户
+                                </span>
+                                <span class="text-sm text-gray-500">
+                                    <i class="fa fa-calendar mr-1"></i> 2019-2021
+                                </span>
+                            </div>
+                      </div>
+                    </div>
+                    
+                    <!-- 项目6 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md hover-scale">
+                        <div class="relative">
+                            <img src="https://imgsa.baidu.com/forum/w%3D580/sign=0e14886ade54564ee565e43183de9cde/9cf16618367adab40dadaf3a88d4b31c8601e4b7.jpg" alt="魔法全明星游戏截图" class="w-full h-56 object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                                <div class="p-6">
+                                    <span class="px-3 py-1 bg-primary text-white text-xs rounded-full">休闲竞技</span>
+                                    <h3 class="text-white font-bold text-xl mt-2">魔法全明星</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-600 mb-4">
+                              一款融合了多种魔法元素的休闲竞技手游，支持实时对战，采用Cocos引擎开发。
+                          </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">Cocos&nbsp;</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">lua&nbsp;</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">休闲</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">养成&nbsp;</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500">
+                                    <i class="fa fa-users mr-1"></i> 300万+用户
+                                </span>
+                                <span class="text-sm text-gray-500">
+                                    <i class="fa fa-calendar mr-1"></i> 2022-至今
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
